@@ -6,7 +6,8 @@ import {makeStyles} from '@mui/styles';
 const useStyles = makeStyles((theme)=>({
     container:{
         background: theme.palette.secondary.main,
-        padding: '4vm 12vm',
+        padding: '3em',
+        color: theme.palette.background.paper,
     }
 }))
 
@@ -17,20 +18,20 @@ export default function CenterText() {
         <Grid className={classes.container} container direction='column' justify="space-around" alignItems="center" spacing={3}>
             <Grid item xs={8}>
                 <Typography variant='body1' align='center' gutterBottom={true}>
-                    This is me, now that you already know me, please don't be shitty
+                    Hello, Maybe i'm gonna change this space for something new with animatio
                 </Typography>
             </Grid>
             <Grid item xs={8}>
                 <Typography variant='body1' align='center' gutterBottom={true}>
                     <b>
-                        This is me, now that you already know me, please don't be shitty
+                        But for now i'm gonna write some awesome stuff
                     </b>
                     
                 </Typography>
             </Grid>
             <Grid item xs={8}>
                 <Typography variant='body1' align='center' gutterBottom={true}>
-                    This is me, now that you already know me, please don't be shitty
+                    This is my portfolio, i have to write all the stuff for each space
                 </Typography>
             </Grid>  
         </Grid>

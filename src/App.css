@@ -5,6 +5,9 @@
     background-color: brown;
     color:antiquewhite;
 } */
+body {
+    overflow-x: hidden;
+}
 /* body {
     overflow: auto;
     -ms-overflow-style: none; 

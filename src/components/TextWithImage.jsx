@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme)=>({
     },
     
     image:{
-        width: '100%',
+        width: '90%',
         height: 'auto',
     }
     
@@ -21,11 +21,12 @@ export default function TextWithImage({urlImage, title="nothing", direction, bac
         
         <Grid className={classes.container} container columns={16} justifyItems="center" alignItems="center" spacing={2} padding={5}>
             {direction==='left' ? 
-                <>
-                <Grid item xs={8}>
-                    <img src={urlImage} alt="Nothing"/>
+            <>
+                
+                <Grid item xs={8} textAlign='start'>
+                    <img  className={classes.image} src={urlImage} alt="Nothing"/>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={8} textAlign='start' >
                     <Grid container direction='column' justifyItems="center" alignItems="start" spacing={3}>
                         <Grid item xs>
                                 <Typography variant="h2">
@@ -33,20 +34,19 @@ export default function TextWithImage({urlImage, title="nothing", direction, bac
                                 </Typography>
                         </Grid>
                         {text.map((text, index)=>(
-                            <Grid key={index} item xs padding={3}>
+                            <Grid key={index} item xs>
                                 <Typography variant='body1'>
                                     {text}
                                 </Typography>
                             </Grid>
                         ))}
-                        
-                    
+
                     </Grid>
                 </Grid>
             </>
             :
             <>
-                <Grid item xs={10} paddingRight={20}>
+                <Grid item xs={8} textAlign='start' >
                     <Grid container direction='column' justifyItems="center" alignItems="start" spacing={3}>
                         <Grid item xs>
                                 <Typography variant="h2">
@@ -63,8 +63,8 @@ export default function TextWithImage({urlImage, title="nothing", direction, bac
 
                     </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                    <img src={urlImage} alt="Nothing"/>
+                <Grid item xs={8} textAlign='end'>
+                    <img  className={classes.image} src={urlImage} alt="Nothing"/>
                 </Grid>
                 
             </>

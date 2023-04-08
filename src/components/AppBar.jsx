@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Button, Switch, AppBar, IconButton, Container, Toolbar, Typography, Menu, Box, Avatar, Tooltip, MenuItem} from '@mui/material';
 
-import {Menu as MenuIcon, Adb as AdbIcon, DarkMode, LightMode} from '@mui/icons-material/';
+import {Menu as MenuIcon, Code as CodeIcon, Adb as AdbIcon, DarkMode, LightMode} from '@mui/icons-material/';
 //import  from '@mui/icons-material/Adb';
 
 
@@ -28,10 +28,10 @@ function NavBar({themeColor, toggleTheme}) {
   };
 
   return (
-    <AppBar position="static" style={{marginBottom:'30px'}}>
+    <AppBar position="static" style={{marginBottom:'25px'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -47,7 +47,7 @@ function NavBar({themeColor, toggleTheme}) {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            LUIS MARTINEZ
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -86,7 +86,7 @@ function NavBar({themeColor, toggleTheme}) {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           
           <Typography
             variant="h5"
@@ -104,7 +104,7 @@ function NavBar({themeColor, toggleTheme}) {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            LUISMTZ
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -140,10 +140,10 @@ function NavBar({themeColor, toggleTheme}) {
                 horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={()=>{handleCloseUserMenu}}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              {settings.map((setting, index) => (
+                <MenuItem key={index} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
